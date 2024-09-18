@@ -7,6 +7,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import Past from "./components/Past";
 import Camera from "./components/Camera";
+import { Chat } from "./components/Chat";
 
 export default function App() {
   useEffect(() => {
@@ -31,6 +32,7 @@ export default function App() {
         <Route index element={<Upload />} />
         <Route path="/past" element={<Past />} />
         <Route path="/camera" element={<Camera />} />
+        <Route path="/chat" element={<Chat />} />
       </Route>
     </Routes>
   );
