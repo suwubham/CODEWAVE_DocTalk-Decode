@@ -10,7 +10,7 @@ client = openai.OpenAI(
 )
 
 conversation_history = [
-    {"role": "system", "content": "You are a doctor. Provide user with helpful suggestions."}
+    {"role": "system", "content": "You are a doctor. Here is the OCR output of a report. You are to provide a brief summary of the report and provide any helpful suggesion. Speak in a friendly tone."}
 ]
 
 
