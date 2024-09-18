@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar: React.FC = () => {
-  // State to manage the Navbar visibility
+  const { pathname } = useLocation();
+  // State to manAge the Navbar visibility
   const [isOpen, setIsOpen] = useState(false);
 
   // Toggle function
@@ -12,11 +13,11 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="flex h-screen">
-      {/* Navbar */}
+      {/* Sidebar */}
       <div
-        className={`fixed inset-0 top-0 left-0 z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 bg-gray-350 top-0 left-0 z-40 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0 w-2/3" : "-translate-x-full"
-        } md:translate-x-0 md:w-64 bg-gray-800 text-white md:bg-white md:text-gray-800`}
+        } md:translate-x-0 md:w-64 bg-gray-800 text-white md:bg-gray-300 md:text-gray-800`}
       >
         {/* Close button (mobile) */}
         <button
@@ -43,19 +44,43 @@ const Navbar: React.FC = () => {
           <h1 className="text-xl font-semibold mb-4">APP NAME</h1>
           <ul>
             <li>
-              <Link to="/" className="block px-4 py-2 hover:bg-gray-700 rounded">
+              <Link
+                to="/"
+                className={`block px-4 py-2 hover:bg-indigo-600 hover:text-white rounded ${
+                  pathname === "/" ? "bg-indigo-600 text-white rounded" : ""
+                }
+                  `}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/past" className="block px-4 py-2 hover:bg-gray-700 rounded">
+              <Link
+                to="/past"
+                className={`block px-4 py-2 hover:bg-indigo-600 hover:text-white rounded
+                  ${
+                    pathname === "/past"
+                      ? "bg-indigo-600 text-white rounded"
+                      : ""
+                  }
+                  `}
+              >
                 Past Documents
               </Link>
             </li>
             <li>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-700 rounded">
+              <Link
+                to="/camera"
+                className={`block px-4 py-2 hover:bg-indigo-600 hover:text-white rounded
+                  ${
+                    pathname === "/camera"
+                      ? "bg-indigo-600 text-white rounded"
+                      : ""
+                  }
+                  `}
+              >
                 Settings
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

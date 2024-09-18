@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import Past from "./components/Past";
+import Camera from "./components/Camera";
 
 export default function App() {
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Upload />} />
         <Route path="/past" element={<Past />} />
+        <Route path="/camera" element={<Camera />} />
       </Route>
     </Routes>
   );
