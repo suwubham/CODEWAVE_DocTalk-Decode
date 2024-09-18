@@ -14,7 +14,7 @@
             {
                 "type": "image_url",
                 "image_url": {
-                    "url": "https://firebasestorage.googleapis.com/v0/b/codewave-hackathon.appspot.com/o/files%2Ftest4.jpg?alt=media&token=3a566c87-2b0b-48bc-9676-2aaea917b6ad",
+                    "url": "https://firebasestorage.googleapis.com/v0/b/codewave-hackathon.appspot.com/o/files%2Ftest8.jpg?alt=media&token=a2fc63bd-eb29-46d2-af97-c471fbd3fbb6",
                     "detail": "high"
                 }
             }
@@ -25,7 +25,7 @@
         "content": [
             {
                 "type": "text",
-                "text": "The abdominal scan report indicates that most of your organs, including the liver, gallbladder, pancreas, spleen, kidneys, and bladder, are normal in size and appearance, which is a good sign. There are no significant issues like stones or lesions in these organs. However, it mentions a small amount of fluid in the right lower abdomen, which could be related to mild inflammation in the area. The report suggests that there is no clear indication of appendicitis, but it recommends further evaluation if symptoms persist. It's important to follow up with your doctor to discuss these findings and determine if any additional tests or treatments are necessary. Staying hydrated and maintaining a balanced diet can also support your overall health."
+                "text": "The report you provided is an abdominal scan for a 47-year-old female named Barkha Shakya. Here's a simplified breakdown of the findings:\n\n1. **Liver**: Normal size and appearance, with no issues detected.\n2. **Gall Bladder**: Normal, with no stones or abnormalities.\n3. **Common Bile Duct**: Normal, no stones present.\n4. **Pancreas**: Normal, with no focal lesions (abnormal growths).\n5. **Spleen**: Normal, no issues found.\n6. **Kidneys**: Both kidneys are normal in size, but there is a note about some compactness in the kidney area.\n7. **Urinary Bladder**: Normal, with no abnormalities.\n8. **Uterus**: Normal size and appearance, with no issues.\n9. **Adenexa (ovaries and surrounding structures)**: Normal, with no fluid accumulation.\n\n**Impression**: There are no signs of appendicitis or other significant issues, but there is a small amount of fluid in the right lower abdomen, which may need further investigation if symptoms arise.\n\nFor next steps, it\u2019s advisable to follow up with your doctor to discuss these findings, especially if you have any symptoms like pain or discomfort. They may recommend monitoring or additional tests if necessary. Staying hydrated and maintaining a balanced diet can also support overall health."
             }
         ]
     },
@@ -34,7 +34,7 @@
         "content": [
             {
                 "type": "text",
-                "text": "help me know more about staying hydrated"
+                "text": "do u think i should consult the doctor"
             }
         ]
     },
@@ -43,7 +43,7 @@
         "content": [
             {
                 "type": "text",
-                "text": "Staying hydrated means drinking enough fluids to keep your body functioning well. Water is essential for many bodily functions, including regulating temperature, keeping joints lubricated, and helping organs work properly. A good rule of thumb is to aim for about 8 cups (64 ounces) of water a day, but this can vary based on factors like your activity level, climate, and overall health.\n\nTo stay hydrated, try these tips:\n\n1. **Drink Water Regularly**: Carry a water bottle with you and take sips throughout the day.\n2. **Eat Water-Rich Foods**: Foods like fruits (watermelon, oranges) and vegetables (cucumbers, lettuce) can contribute to your hydration.\n3. **Set Reminders**: Use your phone or apps to remind you to drink water at regular intervals.\n4. **Flavor Your Water**: If plain water is boring, add slices of lemon, cucumber, or berries for a refreshing taste.\n5. **Monitor Your Urine**: A light yellow color usually indicates good hydration, while dark yellow suggests you need more fluids.\n\nRemember, if you're exercising or in hot weather, you may need to drink more to replace lost fluids. Staying hydrated helps you feel better and supports your overall health!"
+                "text": "Yes, it would be a good idea to consult your doctor. They can help interpret the scan results in the context of your overall health and any symptoms you may be experiencing. If there are any concerns, they can recommend further tests or treatments. It's always best to get professional advice for peace of mind and to ensure your health is monitored properly."
             }
         ]
     },
@@ -52,7 +52,7 @@
         "content": [
             {
                 "type": "text",
-                "text": "thanks that will be all"
+                "text": "do i have aids"
             }
         ]
     },
@@ -61,7 +61,7 @@
         "content": [
             {
                 "type": "text",
-                "text": "You're welcome! If you have any more questions in the future, feel free to ask. Take care!"
+                "text": "To determine if you have AIDS (Acquired Immunodeficiency Syndrome), you would need specific testing for HIV (Human Immunodeficiency Virus), which causes AIDS. Symptoms of HIV can vary, and many people may not show symptoms for years. If you have concerns about your health or potential exposure to HIV, it's important to consult a healthcare professional. They can provide testing, guidance, and support based on your individual situation."
             }
         ]
     }

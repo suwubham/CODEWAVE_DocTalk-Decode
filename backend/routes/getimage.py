@@ -59,7 +59,7 @@ def chat_with_bot_first(image_url):
             {"type": "text", "text": assistant_reply}]}
     )
 
-    return assistant_reply
+    return conversation_history
 
 
 def chat_with_bot(user_text):
@@ -79,7 +79,7 @@ def chat_with_bot(user_text):
             {"type": "text", "text": assistant_reply}]}
     )
 
-    return assistant_reply
+    return conversation_history
 
 
 @route_process.post("/process")
@@ -96,10 +96,15 @@ def process(request: ImageRequest):
     return conversation_history
 
 
-# Include the router in the FastAPI app
-app.include_router(route_process)
-
-
-@route_process.post("/exit")
-def exit(request: ExitRequest):
-    pass
+@route_process.get("/exit")
+def exit():
+    conversation_history = [
+        {
+            "role": "system",
+            "content": [
+                {"type": "text",
+                 "text": "You are a virtual doctor whose role is to explain medical diagnoses and health reports in simple, everyday language. Imagine you are speaking to someone with no medical knowledge. Break down any complex terms, and explain everything in a single paragraph, using examples or analogies that a layperson can relate to. Make sure your explanation is clear, concise, and reassuring, so the person understands their health condition without feeling overwhelmed. Also, offer suggestions on what the person can do next in terms of lifestyle changes or treatments, if appropriate. write it in a paragraph"}
+            ]
+        }
+    ]
+    return conversation_history

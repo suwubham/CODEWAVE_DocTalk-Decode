@@ -40,8 +40,7 @@ const FileUpload: React.FC = () => {
             body: url,
             first: "1",
           });
-          console.log(response.data);
-          navigate("/chat", { state: { message: response.data } });
+          navigate("/chat", { state: response.data });
           setDownloadURL(url);
         });
       }
