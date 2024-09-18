@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebase";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import axios from "axios";
 
 const FileUpload: React.FC = () => {
@@ -47,9 +49,10 @@ const FileUpload: React.FC = () => {
   return (
     <div>
       <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload} disabled={!file} className="text-white">
+
+      <Button variant="secondary" onClick={handleUpload} disabled={!file}>
         Upload
-      </button>
+      </Button>
 
       {/* {uploadProgress > 0 && <p>Progress: {uploadProgress}%</p>} */}
       {downloadURL && (
