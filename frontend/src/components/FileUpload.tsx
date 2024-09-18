@@ -36,7 +36,8 @@ const FileUpload: React.FC = () => {
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then(async (url) => {
           const response = await axios.post("http://127.0.0.1:8000/process", {
-            image_url: url,
+            body: url,
+            first: "1",
           });
           console.log(response.data);
           setDownloadURL(url);
