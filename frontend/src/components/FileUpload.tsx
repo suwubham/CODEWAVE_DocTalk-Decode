@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebase";
+import { Button } from "@/components/ui/button";
 
 const FileUpload: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -41,9 +42,9 @@ const FileUpload: React.FC = () => {
   return (
     <div>
       <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload} disabled={!file} className="text-white">
+      <Button onClick={handleUpload} disabled={!file} >
         Upload
-      </button>
+      </Button>
 
       {/* {uploadProgress > 0 && <p>Progress: {uploadProgress}%</p>} */}
       {downloadURL && (
