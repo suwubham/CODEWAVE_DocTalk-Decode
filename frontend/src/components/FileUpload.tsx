@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebase";
+import axios from "axios";
 
 const FileUpload: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -31,7 +32,11 @@ const FileUpload: React.FC = () => {
         console.error("Upload failed", error);
       },
       () => {
-        getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+        getDownloadURL(uploadTask.snapshot.ref).then(async (url) => {
+          const response = await axios.post("http://127.0.0.1:8000/process", {
+            image_url: url,
+          });
+          console.log(response.data);
           setDownloadURL(url);
         });
       }
