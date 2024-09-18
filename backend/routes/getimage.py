@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from fastapi import APIRouter, FastAPI
 from pydantic import BaseModel
+import json
 
 client = OpenAI()
 
@@ -90,7 +91,9 @@ def process(request: ImageRequest):
         assistant_reply = chat_with_bot(request.body)
 
     # Return the assistant's reply in the API response
-    return {"reply": assistant_reply}
+    with open('data.json', 'w') as file:
+        json.dump(conversation_history, file, indent=4)
+    return conversation_history
 
 
 # Include the router in the FastAPI app

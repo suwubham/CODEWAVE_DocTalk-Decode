@@ -5,12 +5,13 @@ import { storage } from "../../firebase";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const FileUpload: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
   const [uploadProgress, setUploadProgress] = useState<number>(0);
   const [downloadURL, setDownloadURL] = useState<string | null>(null);
-
+  const navigate = useNavigate();
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files) {
       setFile(event.target.files[0]);
@@ -40,6 +41,7 @@ const FileUpload: React.FC = () => {
             first: "1",
           });
           console.log(response.data);
+          navigate("/chat", { state: { message: response.data } });
           setDownloadURL(url);
         });
       }
