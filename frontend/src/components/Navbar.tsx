@@ -83,13 +83,13 @@ const Navbar: React.FC = () => {
     <div className="flex h-screen">
       {/* Sidebar */}
       <div
-        className={`fixed inset-0 bg-gray-350 top-0 left-0 z-40 transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0 w-2/3" : "-translate-x-full"
-        } md:translate-x-0 md:w-64 bg-gray-800 text-white md:bg-gray-300 md:text-gray-800`}
+        className={`fixed inset-0 bg-gray-700 top-0 left-0 z-40 transform transition-transform duration-300 ease-in-out 
+          ${isOpen ? "translate-x-0 w-2/3" : "-translate-x-full"}
+           md:translate-x-0 md:w-64 bg-gray-700 text-white md:bg-gray-700 md:text-white`}
       >
         {/* Close button (mobile) */}
         <button
-          className="absolute top-4 right-4 md:hidden p-2 text-white"
+          className="absolute top-4 right-4 md:hidden p-2 text-white bg-gray-700"
           onClick={toggleSidebar}
         >
           <svg
@@ -162,7 +162,7 @@ const Navbar: React.FC = () => {
       {/* Main content */}
       <div className="flex-1 p-4">
         {/* Toggle button (mobile) */}
-        <button className="md:hidden p-2 text-gray-800" onClick={toggleSidebar}>
+        <button className="md:hidden p-2 text-white" onClick={toggleSidebar}>
           <svg
             className="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
