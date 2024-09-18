@@ -1,9 +1,11 @@
-import Navbar from "./components/Navbar";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./Layout/Layout";
 import Upload from "./components/Upload";
 import "./App.css";
 import { useEffect } from "react";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
+import Past from "./components/Past";
 
 export default function App() {
   useEffect(() => {
@@ -23,11 +25,11 @@ export default function App() {
     getCities(); // Call the async function
   }, []);
   return (
-    <div className="mainLayout">
-      <Navbar />
-      <div className="flex border-2 justify-center items-center w-full">
-        <Upload />
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Upload />} />
+        <Route path="/past" element={<Past />} />
+      </Route>
+    </Routes>
   );
 }
