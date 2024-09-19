@@ -84,9 +84,9 @@ const Navbar: React.FC = () => {
     <div className="flex h-screen">
       {/* Sidebar */}
       <div
-        className={`fixed inset-0 bg-gray-700 top-0 left-0 z-40 transform transition-transform duration-300 ease-in-out 
+        className={`fixed inset-0 bg-gray-800 top-0 left-0 z-40 transform transition-transform duration-300 ease-in-out 
           ${isOpen ? "translate-x-0 w-2/3" : "-translate-x-full"}
-           md:translate-x-0 md:w-64 bg-gray-700 text-white md:bg-gray-700 md:text-white`}
+           md:translate-x-0 md:w-64 bg-gray-800 text-white md:bg-gray-800 md:text-white`}
       >
         {/* Close button (mobile) */}
         <button
