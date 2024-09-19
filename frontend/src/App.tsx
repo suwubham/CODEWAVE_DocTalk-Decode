@@ -10,22 +10,6 @@ import Camera from "./components/Camera";
 import { Chat } from "./components/Chat";
 
 export default function App() {
-  useEffect(() => {
-    console.log("useEffect triggered");
-
-    const getCities = async () => {
-      try {
-        const citiesCol = collection(db, "test");
-        const citySnapshot = await getDocs(citiesCol);
-        const cityList = citySnapshot.docs.map((doc) => doc.data());
-        console.log("City List: ", cityList);
-      } catch (error) {
-        console.error("Error fetching cities: ", error);
-      }
-    };
-
-    getCities(); // Call the async function
-  }, []);
   return (
     <Routes>
       <Route path="/" element={<Layout />}>

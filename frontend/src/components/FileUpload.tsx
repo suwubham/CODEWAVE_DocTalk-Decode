@@ -1,11 +1,11 @@
 // src/components/FileUpload.tsx
 import React, { useState, Dispatch, SetStateAction } from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { storage } from "../../firebase";
+import { storage, db } from "../../firebase"; // Ensure you have db initialized in firebase.js
 import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { collection, addDoc, Timestamp } from "firebase/firestore"; // Import db methods
 
 interface FileUploadProps {
   loading: boolean;
@@ -18,6 +18,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ loading, setIsloading }) => {
   const [uploadProgress, setUploadProgress] = useState<number>(0);
   const [downloadURL, setDownloadURL] = useState<string | null>(null);
   const navigate = useNavigate();
+
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files) {
       setFile(event.target.files[0]);
@@ -42,13 +43,26 @@ const FileUpload: React.FC<FileUploadProps> = ({ loading, setIsloading }) => {
       },
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then(async (url) => {
-          const response = await axios.post("http://127.0.0.1:8000/process", {
-            body: url,
-            first: "1",
-          });
-          console.log(response.data);
-          navigate("/chat", { state: { message: response.data } });
-          setDownloadURL(url);
+          // Save the download URL and timestamp to db
+          try {
+            const docRef = await addDoc(collection(db, "uploads"), {
+              downloadURL: url,
+              createdAt: Timestamp.now(),
+            });
+
+            console.log("Document written with ID: ", docRef.id);
+
+            // Sending the URL to your backend
+            const response = await axios.post("http://127.0.0.1:8000/process", {
+              body: url,
+              first: "1",
+            });
+
+            navigate("/chat", { state: response.data });
+            setDownloadURL(url);
+          } catch (e) {
+            console.error("Error adding document: ", e);
+          }
         });
       }
     );
