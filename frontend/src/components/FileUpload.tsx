@@ -57,19 +57,16 @@ const FileUpload: React.FC<FileUploadProps> = ({ loading, setIsloading }) => {
               body: url,
               first: "1",
             });
-
+            setIsloading(false);
             navigate("/chat", { state: response.data });
             setDownloadURL(url);
           } catch (e) {
             console.error("Error adding document: ", e);
+            setIsloading(false);
           }
         });
       }
     );
-    setTimeout(() => {
-      setIsloading(false);
-    }, 2500);
-    console.log(loading);
   };
 
   return (

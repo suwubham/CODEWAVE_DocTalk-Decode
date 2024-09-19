@@ -33,7 +33,9 @@ const Upload = () => {
                 Learn More
               </a>
             </div>
-            {isLoading && <p className="mt-5">Uploading...</p>}
+            <div className="flex justify-center mt-2">
+              {isLoading && <div className="loader"></div>}
+            </div>
           </div>
         </div>
       </section>

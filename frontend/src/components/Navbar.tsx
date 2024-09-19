@@ -94,21 +94,6 @@ const Navbar: React.FC = () => {
                 Settings
               </Link>
             </li>
-            <li>
-              <Link
-                to="/chat"
-                state={message}
-                className={`block px-4 py-2 hover:bg-indigo-600 hover:text-white rounded
-                  ${
-                    pathname === "/chat"
-                      ? "bg-indigo-600 text-white rounded"
-                      : ""
-                  }
-                  `}
-              >
-                Go to Chat
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
