@@ -119,7 +119,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 to="/"
-                className={`block px-4 py-2 text-xl font-semibold hover:bg-indigo-600 hover:text-white rounded ${
+                className={`block px-4 py-2 text-xl hover:bg-indigo-600 hover:text-white rounded ${
                   pathname === "/" ? "bg-indigo-600 text-white rounded" : ""
                 }
                   `}
