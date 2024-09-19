@@ -46,7 +46,7 @@ export const Chat = () => {
       <div className="relative rounded-lg border bg-background focus-within:ring-1 focus-within:ring-ring p-1 w-full">
         <ChatInput
           placeholder="Type your message here..."
-          className="min-h-12 resize-none rounded-lg bg-background border-0 p-3 shadow-none focus-visible:ring-0 w-full text-black"
+          className="text-black w-full min-h-12 resize-none rounded-lg bg-background border-0 p-3 shadow-none focus-visible:ring-0 w-full text-black"
           onChange={(e) => {
             setText(e.target.value);
           }}
