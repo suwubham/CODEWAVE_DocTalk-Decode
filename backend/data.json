@@ -14,7 +14,7 @@
             {
                 "type": "image_url",
                 "image_url": {
-                    "url": "https://firebasestorage.googleapis.com/v0/b/codewave-hackathon.appspot.com/o/files%2Ftest8.jpg?alt=media&token=a2fc63bd-eb29-46d2-af97-c471fbd3fbb6",
+                    "url": "https://firebasestorage.googleapis.com/v0/b/codewave-hackathon.appspot.com/o/files%2Ftest9.jpg?alt=media&token=1f3fde8b-0806-4f94-9734-07edee60797c",
                     "detail": "high"
                 }
             }
@@ -25,7 +25,7 @@
         "content": [
             {
                 "type": "text",
-                "text": "The report you provided is an abdominal scan for a 47-year-old female named Barkha Shakya. Here's a simplified breakdown of the findings:\n\n1. **Liver**: Normal size and appearance, with no issues detected.\n2. **Gall Bladder**: Normal, with no stones or abnormalities.\n3. **Common Bile Duct**: Normal, no stones present.\n4. **Pancreas**: Normal, with no focal lesions (abnormal growths).\n5. **Spleen**: Normal, no issues found.\n6. **Kidneys**: Both kidneys are normal in size, but there is a note about some compactness in the kidney area.\n7. **Urinary Bladder**: Normal, with no abnormalities.\n8. **Uterus**: Normal size and appearance, with no issues.\n9. **Adenexa (ovaries and surrounding structures)**: Normal, with no fluid accumulation.\n\n**Impression**: There are no signs of appendicitis or other significant issues, but there is a small amount of fluid in the right lower abdomen, which may need further investigation if symptoms arise.\n\nFor next steps, it\u2019s advisable to follow up with your doctor to discuss these findings, especially if you have any symptoms like pain or discomfort. They may recommend monitoring or additional tests if necessary. Staying hydrated and maintaining a balanced diet can also support overall health."
+                "text": "The abdominal scan report indicates that most of your organs, including the liver, gallbladder, pancreas, spleen, kidneys, and bladder, are normal in size and appearance, which is a good sign. There are no significant issues like stones or lesions in these organs. However, it mentions a small amount of fluid in the right lower abdomen, which could be related to mild inflammation. The report suggests that there is no clear indication of appendicitis, but it recommends further evaluation if symptoms persist. It's important to follow up with your doctor to discuss these findings and any symptoms you may be experiencing. They may suggest monitoring your condition or conducting additional tests if necessary. Staying hydrated and maintaining a balanced diet can also support your overall health."
             }
         ]
     },
@@ -34,7 +34,7 @@
         "content": [
             {
                 "type": "text",
-                "text": "do u think i should consult the doctor"
+                "text": "thanks tell me about harry potter"
             }
         ]
     },
@@ -43,7 +43,7 @@
         "content": [
             {
                 "type": "text",
-                "text": "Yes, it would be a good idea to consult your doctor. They can help interpret the scan results in the context of your overall health and any symptoms you may be experiencing. If there are any concerns, they can recommend further tests or treatments. It's always best to get professional advice for peace of mind and to ensure your health is monitored properly."
+                "text": "\"Harry Potter\" is a popular fantasy book series written by J.K. Rowling. It follows the journey of a young boy named Harry Potter, who discovers he is a wizard on his 11th birthday. He attends Hogwarts School of Witchcraft and Wizardry, where he makes friends, learns magic, and uncovers the truth about his past, including his connection to the dark wizard Voldemort, who killed his parents.\n\nThe series consists of seven books, starting with \"Harry Potter and the Sorcerer's Stone\" (or \"Philosopher's Stone\" in some regions) and ending with \"Harry Potter and the Deathly Hallows.\" Themes of friendship, bravery, and the battle between good and evil are central to the story. The books have been adapted into a successful film series, and the franchise has expanded to include spin-off films, merchandise, and a theme park, making it a significant part of popular culture."
             }
         ]
     },
@@ -51,8 +51,11 @@
         "role": "user",
         "content": [
             {
-                "type": "text",
-                "text": "do i have aids"
+                "type": "image_url",
+                "image_url": {
+                    "url": "https://firebasestorage.googleapis.com/v0/b/codewave-hackathon.appspot.com/o/files%2Ftest10.jpg?alt=media&token=aae236e4-feb4-4df6-85be-ae2aa8f0cfe1",
+                    "detail": "high"
+                }
             }
         ]
     },
@@ -61,7 +64,70 @@
         "content": [
             {
                 "type": "text",
-                "text": "To determine if you have AIDS (Acquired Immunodeficiency Syndrome), you would need specific testing for HIV (Human Immunodeficiency Virus), which causes AIDS. Symptoms of HIV can vary, and many people may not show symptoms for years. If you have concerns about your health or potential exposure to HIV, it's important to consult a healthcare professional. They can provide testing, guidance, and support based on your individual situation."
+                "text": "The abdominal scan report indicates that most of your organs are functioning normally. Your liver, gallbladder, pancreas, spleen, kidneys, and bladder all appear healthy, with no signs of stones or lesions. However, there is a small amount of fluid noted in the right lower abdomen, which may suggest mild inflammation. The report does not show any clear signs of appendicitis, but it advises further evaluation if you have ongoing symptoms. It's important to discuss these findings with your doctor, who may recommend monitoring your condition or additional tests if needed. Staying hydrated and maintaining a healthy diet can also be beneficial for your overall well-being."
+            }
+        ]
+    },
+    {
+        "role": "user",
+        "content": [
+            {
+                "type": "image_url",
+                "image_url": {
+                    "url": "https://firebasestorage.googleapis.com/v0/b/codewave-hackathon.appspot.com/o/files%2Ftest10.jpg?alt=media&token=7cc26691-7fed-4654-a15f-aa651383e03a",
+                    "detail": "high"
+                }
+            }
+        ]
+    },
+    {
+        "role": "assistant",
+        "content": [
+            {
+                "type": "text",
+                "text": "The abdominal scan report shows that most of your organs are normal, which is a positive outcome. Your liver, gallbladder, pancreas, spleen, kidneys, and bladder are all functioning well, with no signs of stones or lesions. However, there is a small amount of fluid in the right lower abdomen, which may indicate mild inflammation. The report suggests that there are no clear signs of appendicitis, but it recommends further evaluation if you have ongoing symptoms. It's important to discuss these findings with your doctor, who can provide guidance on any necessary follow-up tests or treatments. Maintaining a healthy lifestyle, including staying hydrated and eating a balanced diet, can also support your overall health."
+            }
+        ]
+    },
+    {
+        "role": "user",
+        "content": [
+            {
+                "type": "image_url",
+                "image_url": {
+                    "url": "https://firebasestorage.googleapis.com/v0/b/codewave-hackathon.appspot.com/o/files%2Ftest11.jpg?alt=media&token=ee76befd-875d-4e97-a82f-b7be3db2bb3d",
+                    "detail": "high"
+                }
+            }
+        ]
+    },
+    {
+        "role": "assistant",
+        "content": [
+            {
+                "type": "text",
+                "text": "The abdominal scan report indicates that most of your organs are functioning normally, which is reassuring. Your liver, gallbladder, pancreas, spleen, kidneys, and bladder all appear healthy, with no signs of stones or lesions. However, there is a small amount of fluid in the right lower abdomen, which may suggest mild inflammation. The report does not show clear signs of appendicitis but recommends further evaluation if you have ongoing symptoms. It's important to discuss these findings with your doctor, who can guide you on any necessary follow-up tests or treatments. Maintaining a healthy lifestyle, including staying hydrated and eating a balanced diet, can also support your overall well-being."
+            }
+        ]
+    },
+    {
+        "role": "user",
+        "content": [
+            {
+                "type": "image_url",
+                "image_url": {
+                    "url": "https://firebasestorage.googleapis.com/v0/b/codewave-hackathon.appspot.com/o/files%2Ftest11.jpg?alt=media&token=1b0613e6-4ab7-4afd-a78f-5fe61892de86",
+                    "detail": "high"
+                }
+            }
+        ]
+    },
+    {
+        "role": "assistant",
+        "content": [
+            {
+                "type": "text",
+                "text": "The abdominal scan report shows that most of your organs are normal, which is a positive sign. Your liver, gallbladder, pancreas, spleen, kidneys, and bladder are all functioning well, with no stones or lesions detected. However, there is a small amount of fluid in the right lower abdomen, which may indicate mild inflammation. The report does not provide clear evidence of appendicitis but suggests further evaluation if you have ongoing symptoms. It's important to discuss these findings with your doctor, who can recommend any necessary follow-up tests or treatments. Maintaining a healthy lifestyle, including staying hydrated and eating a balanced diet, can also support your overall health."
             }
         ]
     }

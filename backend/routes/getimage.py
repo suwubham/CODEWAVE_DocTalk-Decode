@@ -10,15 +10,19 @@ client = OpenAI()
 app = FastAPI()
 route_process = APIRouter()
 
-conversation_history = [
+# Default conversation history
+default_conversation_history = [
     {
         "role": "system",
         "content": [
             {"type": "text",
-             "text": "You are a virtual doctor whose role is to explain medical diagnoses and health reports in simple, everyday language. Imagine you are speaking to someone with no medical knowledge. Break down any complex terms, and explain everything in a single paragraph, using examples or analogies that a layperson can relate to. Make sure your explanation is clear, concise, and reassuring, so the person understands their health condition without feeling overwhelmed. Also, offer suggestions on what the person can do next in terms of lifestyle changes or treatments, if appropriate. write it in a paragraph"}
+             "text": "Given the following medical report text, provide a paragraph summarizing what the report says in an 8th-grade level and patient-friendly manner. Write in nepali"}
         ]
     }
 ]
+
+# Initialize conversation history with the default value
+conversation_history = default_conversation_history.copy()
 
 
 class ImageRequest(BaseModel):
@@ -67,7 +71,7 @@ def chat_with_bot(user_text):
         {"role": "user", "content": [{"type": "text", "text": user_text}]})
 
     response = client.chat.completions.create(
-        model='gpt-4o-mini',
+        model='gpt-4o',
         messages=conversation_history,
         temperature=0.1,
         top_p=0.1
@@ -82,29 +86,22 @@ def chat_with_bot(user_text):
     return conversation_history
 
 
+# Route to process chat
 @route_process.post("/process")
 def process(request: ImageRequest):
-    print(request)
     if request.first == "1":
         assistant_reply = chat_with_bot_first(request.body)
     else:
         assistant_reply = chat_with_bot(request.body)
-
-    # Return the assistant's reply in the API response
-    with open('data.json', 'w') as file:
-        json.dump(conversation_history, file, indent=4)
     return conversation_history
 
 
+# Route to reset conversation history
 @route_process.get("/exit")
-def exit():
-    conversation_history = [
-        {
-            "role": "system",
-            "content": [
-                {"type": "text",
-                 "text": "You are a virtual doctor whose role is to explain medical diagnoses and health reports in simple, everyday language. Imagine you are speaking to someone with no medical knowledge. Break down any complex terms, and explain everything in a single paragraph, using examples or analogies that a layperson can relate to. Make sure your explanation is clear, concise, and reassuring, so the person understands their health condition without feeling overwhelmed. Also, offer suggestions on what the person can do next in terms of lifestyle changes or treatments, if appropriate. write it in a paragraph"}
-            ]
-        }
-    ]
-    return conversation_history
+def reset_conversation():
+    global conversation_history
+    conversation_history = default_conversation_history.copy()
+    return {"message": "Conversation history has been reset.", "conversation_history": conversation_history}
+
+
+app.include_router(route_process)
