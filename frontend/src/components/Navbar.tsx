@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Logo from "../assets/ai.png";
 
 const Navbar: React.FC = () => {
   const { pathname } = useLocation();
@@ -83,9 +84,9 @@ const Navbar: React.FC = () => {
     <div className="flex h-screen">
       {/* Sidebar */}
       <div
-        className={`fixed inset-0 bg-gray-700 top-0 left-0 z-40 transform transition-transform duration-300 ease-in-out 
+        className={`fixed inset-0 bg-gray-800 top-0 left-0 z-40 transform transition-transform duration-300 ease-in-out 
           ${isOpen ? "translate-x-0 w-2/3" : "-translate-x-full"}
-           md:translate-x-0 md:w-64 bg-gray-700 text-white md:bg-gray-700 md:text-white`}
+           md:translate-x-0 md:w-64 bg-gray-800 text-white md:bg-gray-800 md:text-white`}
       >
         {/* Close button (mobile) */}
         <button
@@ -109,12 +110,16 @@ const Navbar: React.FC = () => {
         </button>
 
         <div className="p-4">
-          <h1 className="text-xl font-semibold mb-4">APP NAME</h1>
-          <ul>
+          <p className="flex items-center justify-evenly mb-4">
+            <img src={Logo} height={40} width={40} />
+            <h1 className="text-2xl text-indigo-400"> Doc Talk Decode</h1>
+          </p>
+          <hr />
+          <ul className="mt-2">
             <li>
               <Link
                 to="/"
-                className={`block px-4 py-2 hover:bg-indigo-600 hover:text-white rounded ${
+                className={`block px-4 py-2 text-xl hover:bg-indigo-600 hover:text-white rounded ${
                   pathname === "/" ? "bg-indigo-600 text-white rounded" : ""
                 }
                   `}
@@ -125,7 +130,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 to="/past"
-                className={`block px-4 py-2 hover:bg-indigo-600 hover:text-white rounded
+                className={`block px-4 py-2 text-xl hover:bg-indigo-600 hover:text-white rounded
                   ${
                     pathname === "/past"
                       ? "bg-indigo-600 text-white rounded"
@@ -133,13 +138,13 @@ const Navbar: React.FC = () => {
                   }
                   `}
               >
-                Past Documents
+                Past-Documents
               </Link>
             </li>
             <li>
               <Link
                 to="/camera"
-                className={`block px-4 py-2 hover:bg-indigo-600 hover:text-white rounded
+                className={`block px-4 py-2 text-xl  hover:bg-indigo-600 hover:text-white rounded
                   ${
                     pathname === "/camera"
                       ? "bg-indigo-600 text-white rounded"
@@ -151,7 +156,17 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link to="/chat" state={message}>
+              <Link
+                to="/chat"
+                state={message}
+                className={`block px-4 py-2 hover:bg-indigo-600 hover:text-white rounded
+                  ${
+                    pathname === "/chat"
+                      ? "bg-indigo-600 text-white rounded"
+                      : ""
+                  }
+                  `}
+              >
                 Go to Chat
               </Link>
             </li>
